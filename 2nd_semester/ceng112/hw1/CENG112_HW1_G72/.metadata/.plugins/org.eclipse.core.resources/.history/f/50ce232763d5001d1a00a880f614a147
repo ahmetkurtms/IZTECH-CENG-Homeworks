@@ -1,0 +1,66 @@
+import classes.Garbage;
+import classes.ibagimpl.GarbageBag;
+import classes.ibagimpl.TrashCan;
+import classes.ibagimpl.RecycleBins.RecycleBins;
+
+import utils.FileIO;
+
+public class GarbageRecyclingApp {
+    public static void main(String[] args)
+    {
+
+        FileIO fileIO = new FileIO();
+        TrashCan trashCan = fileIO.readTrashCan();
+        
+        System.out.println();
+        System.out.println("Name: Trash Can");
+        System.out.println("Size: " + trashCan.getSize());
+        System.out.println("Item Count: " + trashCan.getItemCount());
+        System.out.println("Contents:");
+
+        trashCan.displayItemsTotal();
+
+
+        System.out.println(" \n Now I will separate the garbage...\n");
+
+
+        for (Garbage garbage : trashCan.toArray())
+        {
+            trashCan.separate(garbage);
+
+        }
+
+        RecycleBins.checkBinsAreFilled();
+
+        System.out.println(" \n Done! Here are the informations about the bins after separation:\n");
+
+        for (GarbageBag RecycleBin : RecycleBins.allBinsArray)
+        {
+            System.out.println();
+            System.out.println("Name: " + RecycleBin.getRandomGarbage().getType() + " recycling bin");
+            System.out.println("Size: " + RecycleBin.getSize());
+            System.out.println("Item Count: " + RecycleBin.getItemCount());
+            System.out.println("Contents:");
+
+            RecycleBin.displayItemsTotal();
+        }
+
+
+        System.out.println("\n After all these operations, let's check the status of Trash Can.");
+        
+        System.out.println();
+        System.out.println("Name: Trash Can");
+        System.out.println("Size: " + trashCan.getSize());
+        System.out.println("Item Count: " + trashCan.getItemCount());
+        System.out.println("Contents:");
+
+        trashCan.displayItemsTotal();
+
+
+        System.out.println("\n Let's update the garbage.txt file according to this too...");
+
+        fileIO.updateTrashCan(trashCan);
+
+        System.out.println("\n Done! garbage.txt has been updated, you can check it!");
+    }
+}

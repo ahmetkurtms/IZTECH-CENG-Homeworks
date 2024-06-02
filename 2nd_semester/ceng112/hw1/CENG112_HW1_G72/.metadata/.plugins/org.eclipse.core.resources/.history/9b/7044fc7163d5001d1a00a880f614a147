@@ -1,0 +1,33 @@
+package classes.ibagimpl;
+
+import classes.Garbage;
+import classes.ibagimpl.RecycleBins.RecycleBins;
+
+public class TrashCan extends GarbageBag {
+
+    private static int SIZE = 450;
+
+    public TrashCan() {
+        super(SIZE);
+    }
+
+    public boolean separate(Garbage item)
+    {
+        switch (item.getType()) {
+            case "plastic":
+                return transferTo(RecycleBins.plasticRecycleBin, item);
+            case "paper":
+                return transferTo(RecycleBins.paperRecycleBin, item);
+            case "glass":
+                return transferTo(RecycleBins.glassRecycleBin, item);
+            case "fabric":
+                return transferTo(RecycleBins.fabricRecycleBin, item);
+            case "metal":
+                return transferTo(RecycleBins.metalRecycleBin, item);
+            case "organic":
+                return transferTo(RecycleBins.organicRecycleBin, item);
+            default:
+                return false;
+        }
+    }
+}
