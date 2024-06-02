@@ -1,0 +1,23 @@
+category; name; portion; price
+Sandwiches or Wrap; Patty with Cheese; 1/4 lb; $3.49
+Sandwiches or Wrap; Patty with Cheese; 1/2 lb; $4.29
+Sandwiches or Wrap; Patty with Cheese; 3/4 lb; $5.59
+Sandwiches or Wrap; Patty with Beef; 1/2 lb; $5.39
+Sandwiches or Wrap; Kids Cheeseburger; Mini; $1.39
+Sandwiches or Wrap; Chicken Wrap; Regular; $1.69
+Salads; Hummus & Chicken Salad; Full Size; $5.89
+Salads; Hummus & Chicken Salad; 1/2 Size; $3.89
+Salads; Classic Chicken Salad; Full Size; $5.89
+Salads; Classic Chicken Salad; 1/2 Size; $3.89
+Salads; Chicken Caesar; Full Size; $5.89
+Salads; Chicken Caesar; 1/2 Size; $3.89
+Milkshake; Chocolate Milkshake; Small; $0.99
+Milkshake; Chocolate Milkshake; Medium; $2.19
+Milkshake; Chocolate Milkshake; Large; $2.49
+Fries; Fries; Small; $1.59
+Fries; Fries; Medium; $1.99
+Fries; Fries; Large; $2.39
+Sauce; Chilli; Small; $0.99
+Sauce; Chilli; Large; $1.99
+Side; Sour Cream & Chive Baked Potato; Regular; $0.99
+Side; Chicken & Cheddar Baked Potato; Regular; $2.49
