@@ -1,0 +1,22 @@
+module alu32 (
+    output reg [31:0] alu_out,  // ALU output
+    output reg zout,           // Zero flag
+    input [31:0] a, b,         // ALU inputs
+    input [3:0] alu_control    // ALU control signal (corrected to 4 bits)
+);
+
+    // ALU Operations
+    always @(*) begin
+        case (alu_control)
+            4'b0000: alu_out = a & b;  // AND
+            4'b0001: alu_out = a | b;  // OR
+            4'b0010: alu_out = a + b;  // ADD
+            4'b0110: alu_out = a - b;  // SUBTRACT
+            4'b0111: alu_out = (a < b) ? 32'b1 : 32'b0;  // SLT
+            4'b1100: alu_out = ~(a | b);  // NOR
+            default: alu_out = 32'b0;     // Default: 0
+        endcase
+        zout = (alu_out == 32'b0) ? 1'b1 : 1'b0;  // Set zero flag if result is 0
+    end
+
+endmodule

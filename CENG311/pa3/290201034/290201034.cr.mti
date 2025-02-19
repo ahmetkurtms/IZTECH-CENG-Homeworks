@@ -1,0 +1,22 @@
+/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_32.v {1 {vlog -work work -stats=none /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mult2_to_1_32
+
+Top level modules:
+	mult2_to_1_32
+
+} {} {}} /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift.v {1 {vlog -work work -stats=none /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shift
+
+Top level modules:
+	shift
+
+} {} {}} /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/signtext.v {1 {vlog -work work -stats=none /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/signtext.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module signext
+
+Top level modules:
+	signext
+
+} {} {}}

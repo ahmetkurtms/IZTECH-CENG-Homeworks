@@ -1,0 +1,264 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/programming assignment 03
+vadder
+Z0 !s110 1735986175
+!i10b 1
+!s100 Dh[[E4B8EZWO:<S>mn;413
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IUK3g27MNU`g2ESUIP>TQe1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 d/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034
+w1735932449
+8/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/adder.v
+F/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/adder.v
+!i122 155
+Z4 L0 1 6
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1735986175.000000
+!s107 /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/processor.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift_2.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/signtext.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_32.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_5.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alucont.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alu32.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/adder.v|
+Z7 !s90 -reportprogress|300|-work|work|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/adder.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alu32.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alucont.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_5.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_32.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/signtext.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift_2.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/processor.v|
+!i113 1
+Z8 o-work work
+Z9 tCvgOpt 0
+valu32
+R0
+!i10b 1
+!s100 gSd<3^zKoSlX=FMe=Z4]S3
+R1
+I^o7bKjFX9b3NPo5D@Bmbi1
+R2
+R3
+w1735934358
+8/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alu32.v
+F/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alu32.v
+!i122 155
+L0 1 26
+R5
+r1
+!s85 0
+31
+R6
+Z10 !s107 /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/processor.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift_2.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/signtext.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_32.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_5.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alucont.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alu32.v|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/adder.v|
+R7
+!i113 1
+R8
+R9
+valucont
+R0
+!i10b 1
+!s100 gi8m_JiReKCkJi1geo8:m1
+R1
+I[za];eCDl99AOC7B?RBkQ3
+R2
+R3
+w1735935428
+8/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alucont.v
+F/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alucont.v
+!i122 155
+L0 1 30
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+R9
+vcontrol
+Z11 !s110 1735932278
+!i10b 1
+!s100 PEN?h7a5UJRkd:e>FXC870
+R1
+IEMX3g11]<AoQaQoMALHf[3
+R2
+R3
+w1735916265
+8/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v
+F/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v
+!i122 136
+L0 1 41
+R5
+r1
+!s85 0
+31
+Z12 !s108 1735932278.000000
+!s107 /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v|
+!i113 1
+R8
+R9
+vmult2_to_1_32
+R0
+!i10b 1
+!s100 Y_Id<LIRQ3DbCYAcIf6lb3
+R1
+I`9zhK_T6Nc`N`352DWA@M2
+R2
+R3
+w1735916503
+8/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_32.v
+F/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_32.v
+!i122 155
+R4
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+R9
+vmult2_to_1_5
+R0
+!i10b 1
+!s100 6h7k^;9UkEdS;Do5Uz^U52
+R1
+IfNmP=J6d6L5I0lX`l0=a?3
+R2
+R3
+w1735932382
+8/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_5.v
+F/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_5.v
+!i122 155
+R4
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+R9
+vprocessor
+R0
+!i10b 1
+!s100 eDPkji<ZXJhCTYLmHP8nD1
+R1
+Il69?3?;d53Y56JMQD4VKO2
+R2
+R3
+w1735938980
+8/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/processor.v
+F/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/processor.v
+!i122 155
+L0 1 219
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+R9
+vshift
+R0
+!i10b 1
+!s100 XX2;Z1lf9Dd@dcO[G5lL:2
+R1
+I7e@4RYCWANF3E07m>TD=21
+R2
+R3
+w1735916313
+8/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift.v
+F/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift.v
+!i122 155
+Z13 L0 1 5
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+R9
+vshift_2
+R11
+!i10b 1
+!s100 LG_8cLE4TT?O4^K_ooZ:R0
+R1
+IN^cCPDQ_4V8lNV=3SRo?00
+R2
+R3
+w1735916544
+Z14 8/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift_2.v
+Z15 F/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift_2.v
+!i122 142
+R13
+R5
+r1
+!s85 0
+31
+R12
+!s107 /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift_2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift_2.v|
+!i113 1
+R8
+R9
+vshifter
+R0
+!i10b 1
+!s100 QiO5[]]?iQZQn[D5<RBC40
+R1
+ITBg]:7Y9X`Wf0KHOa>io21
+R2
+R3
+w1735932430
+R14
+R15
+!i122 155
+R13
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+R9
+vsignext
+R0
+!i10b 1
+!s100 aj?PFk=ka=A4[;Kz]?d6F3
+R1
+I1fK[6e<IcSH9]dcVmDG9h1
+R2
+R3
+w1735916291
+8/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/signtext.v
+F/home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/signtext.v
+!i122 155
+R13
+R5
+r1
+!s85 0
+31
+R6
+R10
+R7
+!i113 1
+R8
+R9

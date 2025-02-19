@@ -1,0 +1,39 @@
+module alucont (
+    input aluop0,  // ALU control signal
+    input aluop1,  // ALU control signal
+    input f3,      // Function field bit 3
+    input f2,      // Function field bit 2
+    input f1,      // Function field bit 1
+    input f0,      // Function field bit 0
+    output reg [2:0] gout  // ALU operation output
+);
+
+  // Combinational always block
+  always @(*) begin
+    if (~(aluop1 | aluop0))
+        gout = 3'b010;  // Default: ADD operation
+    else if (aluop1)
+        gout = 3'b110;  // SUBTRACT operation
+    else if (aluop0) begin
+      if (~(f3 | f2 | f1 | f0))
+          gout = 3'b010;  // ADD
+      else if (f1 & f3)
+          gout = 3'b111;  // SLT
+      else if (f1 & ~f2 & ~f3)
+          gout = 3'b110;  // SUBTRACT
+      else if (f2 & f0)
+          gout = 3'b001;  // OR
+      else if (f2 & ~f0 & ~f1)
+          gout = 3'b000;  // AND
+      else if (f2 & f1 & f3 & f0)
+          gout = 3'b011;  // SLL (Shift Left Logical)
+      else if (f1 & f2)
+          gout = 3'b101;  // NOR
+      else if (f3 & ~f2 & f1 & f0)
+          gout = 3'b100;  // Custom instruction (e.g., SRL)
+      else
+          gout = 3'b000;  // Default to AND if no match
+    end
+  end
+
+endmodule

@@ -1,0 +1,137 @@
+# Loading project 290201034
+cd /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034
+# reading /home/ahmetkurtms/intelFPGA/20.1/modelsim_ase/linuxaloem/../modelsim.ini
+vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/adder.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:18 on Jan 04,2025
+# vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/adder.v 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 01:47:18 on Jan 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alu32.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:18 on Jan 04,2025
+# vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alu32.v 
+# -- Compiling module alu32
+# 
+# Top level modules:
+# 	alu32
+# End time: 01:47:18 on Jan 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alucont.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:18 on Jan 04,2025
+# vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alucont.v 
+# -- Compiling module alucont
+# 
+# Top level modules:
+# 	alucont
+# End time: 01:47:18 on Jan 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:18 on Jan 04,2025
+# vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v 
+# -- Compiling module control
+# ** Error (suppressible): /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v(17): (vlog-2388) 'bne' already declared in this scope (control) at /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v(13).
+# ** Error: /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v(39): (vlog-2730) Undefined variable: 'bne1'.
+# End time: 01:47:18 on Jan 04,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_5.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:18 on Jan 04,2025
+# vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_5.v 
+# -- Compiling module mult2_to_1_5
+# 
+# Top level modules:
+# 	mult2_to_1_5
+# End time: 01:47:18 on Jan 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_32.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:18 on Jan 04,2025
+# vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_32.v 
+# -- Compiling module mult2_to_1_32
+# 
+# Top level modules:
+# 	mult2_to_1_32
+# End time: 01:47:18 on Jan 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/processor.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:18 on Jan 04,2025
+# vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/processor.v 
+# -- Compiling module processor
+# 
+# Top level modules:
+# 	processor
+# End time: 01:47:18 on Jan 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:18 on Jan 04,2025
+# vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift.v 
+# -- Compiling module shift
+# 
+# Top level modules:
+# 	shift
+# End time: 01:47:18 on Jan 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift_2.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:19 on Jan 04,2025
+# vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift_2.v 
+# -- Compiling module shifter
+# 
+# Top level modules:
+# 	shifter
+# End time: 01:47:19 on Jan 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/signtext.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:19 on Jan 04,2025
+# vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/signtext.v 
+# -- Compiling module signext
+# 
+# Top level modules:
+# 	signext
+# End time: 01:47:19 on Jan 04,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/adder.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alu32.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alucont.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_5.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_32.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/processor.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift_2.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/signtext.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:47:23 on Jan 04,2025
+# vlog -reportprogress 300 -work work /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/adder.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alu32.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/alucont.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_5.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/mult2_to_1_32.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/processor.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/shift_2.v /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/signtext.v 
+# -- Compiling module adder
+# -- Compiling module alu32
+# -- Compiling module alucont
+# -- Compiling module control
+# ** Error (suppressible): /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v(17): (vlog-2388) 'bne' already declared in this scope (control) at /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v(13).
+# ** Error: /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/control.v(39): (vlog-2730) Undefined variable: 'bne1'.
+# -- Compiling module mult2_to_1_5
+# -- Compiling module mult2_to_1_32
+# -- Compiling module processor
+# -- Compiling module shift
+# -- Compiling module shifter
+# -- Compiling module signext
+# End time: 01:47:23 on Jan 04,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vsim work.processor
+# vsim work.processor 
+# Start time: 01:48:16 on Jan 04,2025
+# Loading work.processor
+# Loading work.mult2_to_1_5
+# Loading work.mult2_to_1_32
+# Loading work.alu32
+# Loading work.adder
+# Loading work.control
+# Loading work.signext
+# Loading work.alucont
+# Loading work.shift
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu1'.  Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /processor/alu1 File: /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/processor.v Line: 106
+# ** Warning: (vsim-3722) /home/ahmetkurtms/Desktop/iztech/ceng3_1/CENG311/homeworks/290201034/processor.v(106): [TFMPC] - Missing connection for port 'shamt'.
+# End time: 01:49:26 on Jan 04,2025, Elapsed time: 0:01:10
+# Errors: 0, Warnings: 2
