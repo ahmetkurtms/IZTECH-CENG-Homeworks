@@ -14,3 +14,5 @@ Welcome to my homework repository! This is where I organize and store all my ass
 - [CENG 216 - Numerical Computation](./CENG216/)
 - [CENG 218 - Analysis and Design of Algorithms](./CENG218/)
 - [CENG 222 - Probability and Statistics](./CENG222/)
+- [CENG 311 - Computer Architecture](./CENG311/)
+- [CENG 391 - Introduction to Image Understanding](./CENG391/)
