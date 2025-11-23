@@ -1,3 +1,6 @@
+# Group No: G12
+# Authors: Ahmet Kurt 290201034 | Bilgin Baran Sezer 290201057
+
 import pandas as pd
 import itertools
 import numpy as np
@@ -19,8 +22,8 @@ def get_missing_steps(row, steps):
     ##############################################################################
     ### STUB: INSERT CODE HERE: Get missing steps as a tuple for each row.###
     ##############################################################################
-
-    raise NotImplementedError("Get missing steps as a tuple for each row.")
+    # Use list comprehension to find steps where the column value is 1
+    missing_steps = [s for s in steps if row.get(f"step{s}_missing") == 1]
     return tuple(sorted(missing_steps))
 
 def generate_all_subsets(steps):
@@ -51,8 +54,12 @@ def compute_v_S(df, all_subsets_missing):
     ##################################################################################
     ### STUB: INSERT CODE HERE: Compute v(S) for all subsets of missing steps.###
     ##################################################################################
-
-    raise NotImplementedError("Implement the code to compute v(S) for all subsets of missing steps.")
+    v_S = df.groupby('missing_steps')['is_correct'].mean().to_dict()
+    
+    for subset in all_subsets_missing:
+        if subset not in v_S:
+            v_S[subset] = np.nan
+            
     return v_S
 
 def compute_marginal_contributions(steps, v_S):
@@ -79,8 +86,13 @@ def compute_marginal_contributions(steps, v_S):
             #############################################################################################
             ### STUB: INSERT CODE HERE: Retrieve S_i, S_i_union_i, S_i_sorted, S_i_union_i_sorted###
             #############################################################################################
+            # S_i is the set of steps preceding i in the permutation
+            S_i = set(pi[:idx_i])
+            S_i_union_i = S_i | {i}
+            
+            missing_S_i_sorted = tuple(sorted(S_i))
+            missing_S_i_union_i_sorted = tuple(sorted(S_i_union_i))
 
-            raise NotImplementedError("Implement the retrieval of S_i, S_i_union_i, and their sorted tuples.")
             v_S_i = v_S.get(missing_S_i_sorted, np.nan)
             v_S_i_union_i = v_S.get(missing_S_i_union_i_sorted, np.nan)
             if np.isnan(v_S_i) or np.isnan(v_S_i_union_i):
@@ -90,8 +102,7 @@ def compute_marginal_contributions(steps, v_S):
                 ###############################################################################
                 ### STUB: INSERT CODE HERE: Compute the marginal contribution of step i###
                 ###############################################################################
-
-                raise NotImplementedError("Implement the computation of the marginal contribution of step i.")
+                Delta_sum[i] += (v_S_i_union_i - v_S_i)
         if valid_permutation:
             valid_permutations_count += 1
     return Delta_sum, valid_permutations_count
@@ -111,8 +122,10 @@ def compute_shapley_values(Delta_sum, valid_permutations_count, steps):
     ##############################################################
     ### STUB: INSERT CODE HERE: Compute the Shapley values###
     ##############################################################
-
-    raise NotImplementedError("INSERT CODE HERE: Compute the Shapley values")
+    shapley_values = {
+        step: (Delta_sum[step] / valid_permutations_count) if valid_permutations_count > 0 else np.nan
+        for step in steps
+    }
     return shapley_values
 
 def main():
@@ -123,22 +136,33 @@ def main():
     ######################################################################################
     # STUB: INSERT CODE HERE: Generate all possible subsets for the missing steps #       (1 line of code)
     ######################################################################################
-
-    raise NotImplementedError("Implement the code to generate all possible subsets for the missing steps.")
+    all_subsets_missing = generate_all_subsets(steps)
 
     ###############################################
     # STUB: INSERT CODE HERE: Compute v(S) #    (1 line of code)
     ###############################################
-
-    raise NotImplementedError("Implement the code to compute v(S).")
+    v_S = compute_v_S(df, all_subsets_missing)
 
     #############################################################
     # STUB: INSERT CODE HERE: Compute the Shapley values and print for each step #
     #############################################################
-
-    raise NotImplementedError("Implement the code to compute the Shapley values.")
+    Delta_sum, valid_permutations_count = compute_marginal_contributions(steps, v_S)
+    shapley_values = compute_shapley_values(Delta_sum, valid_permutations_count, steps)
+    
+    print("v(S) for all subsets:")
+    for S, val in v_S.items():
+        print(f"{S}: {val}")
+        
+    print("\nDelta_sum (sum of marginal contributions across valid permutations):")
+    print(Delta_sum)
+    print(f"Valid permutations count: {valid_permutations_count}")
+    
+    print("\nShapley values per step:")
+    for i in steps:
+        print(f"Step {i}: {shapley_values[i]}")
 
     
 
 if __name__ == "__main__":
     main()
+

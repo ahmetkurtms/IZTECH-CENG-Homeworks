@@ -1,3 +1,6 @@
+# Group No: G12
+# Authors: Ahmet Kurt 290201034 | Bilgin Baran Sezer 290201057
+
 import re
 import pandas as pd
 from datasets import Dataset
@@ -16,15 +19,15 @@ def reward_function(prompts: list, completions: list, question : list, correct_a
     Keep in mind that we use correct_answer name here instead of answer to avoid confusion with the model's output answer (which is the completions in this case).
 
     Args:
-        prompts (dict): 8 identical prompts for each question.
-        completions (str): 8 different completions from the model for each prompt. Their differences are used for relative comparisons.
-        question (str): The math question being asked. Repeated 8 times to match the completions.
-        correct_answer (str): The correct answer (0:A, 1:B, 2:C, or 3:D) for the question. Repeated 8 times to match the completions.
+        prompts (list): 8 identical prompts for each question.
+        completions (list): 8 different completions from the model for each prompt. Their differences are used for relative comparisons.
+        question (list): The math question being asked. Repeated 8 times to match the completions.
+        correct_answer (list): The correct answer (0:A, 1:B, 2:C, or 3:D) for the question. Repeated 8 times to match the completions.
         args and kwargs: Additional arguments (not used here).
 
     Returns:
         True (1.0) if option A, B, C, or D matches at the last 20 characters of the output, False (0.0) otherwise.
-        List of the above 0s or 1s are returned. By default, there are 8 completions to reward per math question. 
+        List of the above 0s or 1s are returned. By default, there are 8 completions to reward per math question.
     """
 
     def extract_chosen_option(text: str):
@@ -36,11 +39,25 @@ def reward_function(prompts: list, completions: list, question : list, correct_a
     # print("***** Question: ", question[0])
     # print("***** Correct_answer: ", correct_answer[0])
 
-    ######################################
-    ### STUB: INSERT THE CODE HERE ###
-    ######################################
+    rewards = []
 
-    raise NotImplementedError("Reward function for GRPO algorithm. It can handle multiple completions per question and rewards them comperatively. By default, it is n=8 repetitions.")
+    # correct_answer can be a single value or a list
+    if isinstance(correct_answer, list) and len(correct_answer) > 0:
+        correct_letter = correct_answer[0]
+    else:
+        correct_letter = correct_answer
+    if isinstance(correct_letter, str):
+        correct_letter = correct_letter.upper()
+
+    for completion in completions:
+        chosen_letter = extract_chosen_option(completion)
+
+        if chosen_letter and chosen_letter == correct_letter:
+            rewards.append(1.0)
+        else:
+            rewards.append(0.0)
+
+    return rewards
 
 
 # ------------------------------------------------ EXAMPLE SCENARIO for reward function ------------------------------------------------
@@ -67,7 +84,7 @@ ex_row['correct_answer'] = ex_row['answer']
 # print(ex_row['prompt'], "\n")
 
 test_output = 8 * ["To solve this problem, we can use the formula for the number of edges in a complete graph with \\(n\\) vertices:\n\n\\[ E = \\frac{n(n - 1)}{2} \\]\n\nwhere \\(E\\) represents the total number of edges.\n\nGiven \\(n = 10\\), we can substitute \\(n = 10\\) into the formula:\n\n\\[ E = \\frac{10(10 - 1)}{2} \\]\n\\[ E = \\frac{10 \\times 9}{2} \\]\n\\[ E = 5 \\times 9 \\]\n\\[ E = 45 \\]\n\nTherefore, a complete graph with 10 vertices has 45 edges.\n\nMatched option: D<|im_end|>"]
-rewards = reward_function([ex_row], test_output, [ex_row['question']], [ex_row['correct_answer']])
+rewards = reward_function(8 * [ex_row['prompt']], test_output, 8 * [ex_row['question']], 8 * [ex_row['correct_answer']])
 print(f"~~~~~~ Rewards for toy example output: {rewards} \n")
 
 # ----------------------------------------------------------------------------------------------
@@ -82,11 +99,27 @@ print(dataset, "\n")
 
 # Preprocess the dataset to create 'prompt' and 'correct_answer' fields as seen in the above example.
 def preprocess_function(examples):
-    ######################################
-    ### STUB: INSERT THE CODE HERE ###
-    ######################################
-    
-    raise NotImplementedError("Preprocess the dataset to create 'prompt' and 'correct_answer' fields.")
+    prompts = []
+    correct_answers = []
+
+    for i in range(len(examples['question'])):
+        question = examples['question'][i]
+        choices = eval(examples['choices'][i])
+        answer = examples['answer'][i]
+
+        formatted_options = "\n".join(
+            [f"{opt}" for opt in choices]
+        )
+
+        prompt = f"{INSTRUCTION}\n\n-----------\n\nQuestion: {question}\n\nOptions:\n{formatted_options}"
+        prompts.append(prompt)
+
+        correct_answers.append(answer)
+
+    return {
+        'prompt': prompts,
+        'correct_answer': correct_answers
+    }
 
 
 dataset = dataset.map(preprocess_function, batched=True, remove_columns=['answer'])

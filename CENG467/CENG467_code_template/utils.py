@@ -1,27 +1,36 @@
+# Group No: G12
+# Authors: Ahmet Kurt 290201034 | Bilgin Baran Sezer 290201057
 
+import torch
 
 def predict_model(model, tokenizer, messages, configuration=None):
-    ######################################
-    ### STUB: INSERT THE CODE HERE###
-    ######################################
-    
-    raise NotImplementedError("Build the Transformers package operations here based on the configurations given in the assignment")
-    """
-    This function, `predict_model`, is designed to interact with QWEN models to generate predictions
-    based on a conversation history. 
+    if configuration is None:
+        configuration = {"temperature": 0.1, "max_token_limit": 2000}
 
-    Args:
-        model: The pre-trained language model to be used for generating responses.
-        tokenizer: the tokenizer corresponding to the model.
-        messages: A list of dictionaries representing the conversation history,
-                  where each dictionary has a "role" (e.g., "system", "user", or "assistant") 
-                  and "content" (the message text).
-        configuration: initially, the model used should be max_token_limit of 2000, with temperature of 0.1
-        The assessment would mainly be assessed the correctness of the implementation, rather than the performance
+    try:
+        prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    except Exception:
+        prompt = "\n".join([f"{m.get('role','user')}: {m.get('content','')}" for m in messages])
 
-    Returns:
-        The model's response as a string.
-    """
+    inputs = tokenizer(prompt, return_tensors="pt")
+
+    inputs = {k: (v.to(model.device) if hasattr(v, "to") else v) for k, v in inputs.items()}
+
+    gen_kwargs = {
+        "max_new_tokens": int(configuration.get("max_token_limit", 2000)),
+        "temperature": float(configuration.get("temperature", 0.1)),
+        "do_sample": True,
+        "pad_token_id": tokenizer.pad_token_id if tokenizer.pad_token_id is not None else tokenizer.eos_token_id,
+        "eos_token_id": tokenizer.eos_token_id,
+    }
+
+    output_ids = model.generate(**inputs, **gen_kwargs)
+
+    input_len = inputs["input_ids"].shape[-1]
+    new_tokens = output_ids[0][input_len:]
+    text = tokenizer.decode(new_tokens, skip_special_tokens=True)
+
+    return text.strip()
 
 
 def model_evaluation(model_type, model, tokenizer, system_content, question, formatted_options, configuration=None):
